@@ -1,0 +1,21 @@
+body {
+  background: #f4f7fb;
+}
+
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+}
+
+.content-area {
+  flex: 1;
+  padding: 25px;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+textarea {
+  font-family: monospace;
+}
