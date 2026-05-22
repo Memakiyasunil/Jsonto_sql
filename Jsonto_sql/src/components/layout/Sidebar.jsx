@@ -1,35 +1,48 @@
-function Sidebar({ setQueryType }) {
+function Sidebar({ fileUploaded, setQueryType }) {
+
   return (
-    <div className='sidebar bg-dark text-white p-3'>
-      <h5 className='mb-4'>SQL Queries</h5>
+    <div className="sidebar bg-dark text-white p-3">
 
+      <h5 className="mb-4">SQL Menu</h5>
+
+      {/* Always Active */}
+      <button className="btn btn-primary w-100 mb-3">
+        Select File
+      </button>
+
+      {/* Enable After Upload */}
       <button
-        className='btn btn-outline-light w-100 mb-3'
-        onClick={() => setQueryType('INSERT')}
+        disabled={!fileUploaded}
+        className="btn btn-outline-light w-100 mb-3"
+        onClick={() => setQueryType("INSERT")}
       >
-        INSERT QUERY
+        Insert Query
       </button>
 
       <button
-        className='btn btn-outline-light w-100 mb-3'
-        onClick={() => setQueryType('UPDATE')}
+        disabled={!fileUploaded}
+        className="btn btn-outline-light w-100 mb-3"
+        onClick={() => setQueryType("UPDATE")}
       >
-        UPDATE QUERY
+        Update Query
       </button>
 
       <button
-        className='btn btn-outline-light w-100 mb-3'
-        onClick={() => setQueryType('CREATE_TABLE')}
+        disabled={!fileUploaded}
+        className="btn btn-outline-light w-100 mb-3"
+        onClick={() => setQueryType("DELETE")}
       >
-        CREATE TABLE
+        Delete Query
       </button>
 
       <button
-        className='btn btn-outline-light w-100 mb-3'
-        onClick={() => setQueryType('DELETE')}
+        disabled={!fileUploaded}
+        className="btn btn-outline-light w-100 mb-3"
+        onClick={() => setQueryType("CREATE")}
       >
-        DELETE QUERY
+        Create Table
       </button>
+
     </div>
   )
 }

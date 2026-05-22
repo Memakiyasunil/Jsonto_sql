@@ -1,21 +1,27 @@
 body {
-  background: #f4f7fb;
+  background: #f5f7fb;
 }
 
 .sidebar {
   width: 260px;
   min-height: 100vh;
+  background: #111827;
 }
 
 .content-area {
   flex: 1;
-  padding: 25px;
+  padding: 30px;
 }
 
 .card {
   border-radius: 20px;
 }
 
+.btn {
+  border-radius: 12px;
+}
+
+input,
 textarea {
-  font-family: monospace;
+  border-radius: 12px !important;
 }
